@@ -48,6 +48,9 @@ filetype plugin on
 filetype indent on
 set autoread
 
+" Backspace fix for Mac
+set backspace=indent,eol,start
+
 " Files and backups
 set nobackup
 set nowb
