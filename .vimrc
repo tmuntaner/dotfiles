@@ -2,20 +2,14 @@ if !1 | finish | endif
 
 if has('vim_starting')
     set nocompatible " Be iMproved
-
-    " Required:
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-" Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-" Let NeoBundle manage NeoBundle
-" Required:
  NeoBundleFetch 'Shougo/neobundle.vim'
 
-" My Bundles here:
-" Note: You don't set neobundle setting in .gvimrc!
+NeoBundle 'tpope/vim-sensible'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/unite.vim'
@@ -30,26 +24,18 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'anyakichi/vim-surround'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'bling/vim-airline'
 
 call neobundle#end()
 
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
 NeoBundleCheck
 
 syntax enable
-set background=light
-colors github
-set history=700
-filetype plugin on
-filetype indent on
-set autoread
 
-" Backspace fix for Mac
-set backspace=indent,eol,start
+set background=light
+colorscheme solarized
 
 " Files and backups
 set nobackup
@@ -72,17 +58,12 @@ set lbr
 set tw=500
 
 set pastetoggle=<F2>
-set ai "Auto indent
-set si "Smart indent
 set wrap "Wrap lines
 
 " ui
-set wildmenu
-set ruler
 set cmdheight=2
 set smartcase
 set hlsearch
-set incsearch
 set lazyredraw
 set magic
 set showmatch
@@ -114,3 +95,17 @@ if exists(":Tabularize")
     nmap <Leader>a: :Tabularize /:\zs<CR>
     vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
+
+" PHP Overrides
+function! PhpSyntaxOverride()
+  hi! def link phpDocTags  phpDefine
+  hi! def link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
+
+" Airline
+let g:airline_theme='solarized'
