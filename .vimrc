@@ -27,6 +27,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'StanAngeloff/php.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 
 call neobundle#end()
 
@@ -34,8 +35,12 @@ NeoBundleCheck
 
 syntax enable
 
+" Color Scheme
 set background=light
 colorscheme solarized
+
+" Leader for DE Keyboard
+let mapleader = ','
 
 " Files and backups
 set nobackup
