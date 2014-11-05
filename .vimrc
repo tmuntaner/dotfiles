@@ -7,7 +7,7 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 
- NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'tpope/vim-sensible'
 NeoBundle 'mileszs/ack.vim'
@@ -21,7 +21,6 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'wycats/nerdtree'
 NeoBundle 'ddollar/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'anyakichi/vim-surround'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'StanAngeloff/php.vim'
@@ -36,7 +35,7 @@ NeoBundleCheck
 syntax enable
 
 " Color Scheme
-set background=light
+set background=dark
 colorscheme solarized
 
 " Leader for DE Keyboard
@@ -88,17 +87,22 @@ noremap <C-W>s :split
 " nmap <silent> <A-Left> :wincmd h<CR>
 " nmap <silent> <A-Right> :wincmd l<CR>
 
-" Tabularize
-let mapleader=','
-if exists(":Tabularize")
-    nmap <Leader>a= :Tabularize /=<CR>
-    vmap <Leader>a= :Tabularize /=<CR>
-    nmap <Leader>a: :Tabularize /:\zs<CR>
-    vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
-
 " Strip Whitespace on Save
 autocmd BufWritePre * StripWhitespace
 
+" PHP Overrides
+function! PhpSyntaxOverride()
+  hi! def link phpDocTags  phpDefine
+  hi! def link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
+
 " Airline
 let g:airline_theme='solarized'
+
+" Ctrl-P ignore
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.meta
