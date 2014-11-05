@@ -97,16 +97,8 @@ if exists(":Tabularize")
     vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
-" PHP Overrides
-function! PhpSyntaxOverride()
-  hi! def link phpDocTags  phpDefine
-  hi! def link phpDocParam phpType
-endfunction
-
-augroup phpSyntaxOverride
-  autocmd!
-  autocmd FileType php call PhpSyntaxOverride()
-augroup END
+" Strip Whitespace on Save
+autocmd BufWritePre * StripWhitespace
 
 " Airline
 let g:airline_theme='solarized'
