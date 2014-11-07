@@ -35,6 +35,9 @@ NeoBundleCheck
 syntax enable
 
 " Color Scheme
+set t_CO=256
+set term=screen-256color
+
 set background=dark
 colorscheme solarized
 
