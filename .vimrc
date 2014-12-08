@@ -11,6 +11,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'tpope/vim-sensible'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'SuperTab'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'airblade/vim-gitgutter'
@@ -27,6 +28,7 @@ NeoBundle 'StanAngeloff/php.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'nosami/Omnisharp'
 
 call neobundle#end()
 
@@ -108,4 +110,4 @@ augroup END
 let g:airline_theme='solarized'
 
 " Ctrl-P ignore
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.meta
+set wildignore+=*/tmp/*,*/build/*,*.so,*.swp,*.zip,*.meta
