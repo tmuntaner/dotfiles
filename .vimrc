@@ -15,7 +15,6 @@ NeoBundle 'SuperTab'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'flazz/vim-colorschemes'
@@ -25,6 +24,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'anyakichi/vim-surround'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -111,7 +111,7 @@ augroup END
 let g:airline_theme='solarized'
 
 " Ctrl-P ignore
-set wildignore+=*/tmp/*,*/build/*,*.so,*.swp,*.zip,*.meta
+set wildignore+=*/tmp/*,*/bin/*,*/out/*,*/build/*,*.so,*.swp,*.zip,*.meta
 
 " Reformat Page
 map <F7> mzgg=G`z<CR>
