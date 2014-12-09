@@ -75,6 +75,7 @@ set novisualbell
 set t_vb=
 set tm=500
 set number
+set nofoldenable
 
 " Nerdtree
 " autocmd vimenter * NERDTree
@@ -109,3 +110,6 @@ let g:airline_theme='solarized'
 
 " Ctrl-P ignore
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.meta
+
+" Reformat Page
+map <F7> mzgg=G`z<CR>
