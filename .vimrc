@@ -9,26 +9,30 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'tpope/vim-sensible'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'SuperTab'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'Shougo/unite.vim'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'ntpeters/vim-better-whitespace'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'wycats/nerdtree'
-NeoBundle 'ddollar/nerdcommenter'
-NeoBundle 'scrooloose/syntastic'
 NeoBundle 'anyakichi/vim-surround'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'StanAngeloff/php.vim'
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'bling/vim-airline'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'ervandew/supertab'
+NeoBundle 'fatih/vim-go'
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'mileszs/ack.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'nosami/Omnisharp'
+NeoBundle 'ntpeters/vim-better-whitespace'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'tpope/vim-sensible'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+NeoBundle 'vim-ruby/vim-ruby'
 
 call neobundle#end()
 
@@ -95,17 +99,6 @@ noremap <C-W>s :split
 
 " Strip Whitespace on Save
 autocmd BufWritePre * StripWhitespace
-
-" PHP Overrides
-function! PhpSyntaxOverride()
-  hi! def link phpDocTags  phpDefine
-  hi! def link phpDocParam phpType
-endfunction
-
-augroup phpSyntaxOverride
-  autocmd!
-  autocmd FileType php call PhpSyntaxOverride()
-augroup END
 
 " Airline
 let g:airline_theme='solarized'
