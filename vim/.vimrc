@@ -41,11 +41,11 @@ NeoBundleCheck
 syntax enable
 
 " Color Scheme
-set t_CO=256
-set term=screen-256color
+" set t_CO=256
+" set term=screen-256color
 
-set background=dark
-colorscheme solarized
+" set background=light
+" colorscheme solarized
 
 " Leader for DE Keyboard
 let mapleader = ','
@@ -101,7 +101,7 @@ noremap <C-W>s :split
 autocmd BufWritePre * StripWhitespace
 
 " Airline
-let g:airline_theme='solarized'
+" let g:airline_theme='solarized'
 
 " Ctrl-P ignore
 set wildignore+=*/tmp/*,*/bin/*,*/out/*,*/build/*,*.so,*.swp,*.zip,*.meta
