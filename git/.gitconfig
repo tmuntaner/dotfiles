@@ -1,0 +1,7 @@
+[user]
+	email = tmuntaner@suse.de
+	name = Thomas Muntaner
+[commit]
+	gpgsign = true
+[core]
+	excludesfile = /home/tmuntaner/.gitignore_global
