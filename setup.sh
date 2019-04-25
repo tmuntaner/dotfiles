@@ -8,9 +8,6 @@ ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/gnupg/gpg.conf ~/.gnupg/gpg.conf
 
 # vim
-ln -sf ~/vim/.vimrc ~/.vimrc
-
-# vscode
-ln -sf ~/dotfiles/vscode/settings.json ~/.config/Code/User/settings.json
+ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
 
 echo "Done"
