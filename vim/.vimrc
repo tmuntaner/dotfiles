@@ -12,29 +12,19 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'ervandew/supertab'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'ntpeters/vim-better-whitespace'
-NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'raimondi/delimitmate'
 NeoBundle 'tpope/vim-sensible'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'vim-ruby/vim-ruby'
 
 call neobundle#end()
 
 NeoBundleCheck
 
 syntax enable
-
-" Color Scheme
-" set t_CO=256
-" set term=screen-256color
-
-" set background=light
-" colorscheme solarized
 
 " Leader for DE Keyboard
 let mapleader = ','
